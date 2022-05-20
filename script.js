@@ -10,10 +10,21 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var rightprompts = callPrompts();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  if(rightprompts){
+    var correctPassword = generatePassword();
+    
+  
+    passwordText.value = correctPassword;
+  
+
+  } else {
+    passwordText.value = '';
+  }
+
+
 
 }
 
@@ -22,10 +33,17 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword () {
+  var password = '';
+  for(var i= 0; i < charactersLength; i++){
+    var randomarray = Math.floor(Math.random() * choiceArray.length)
+    password = password + choiceArray[randomarray];
+  }
+  return password;
 
 }
 
 function callPrompts (){
+  choiceArray = [];
   charactersLength = parseInt(prompt('Please input the length of your desired password numerically. Must be between 8-128 characters'));
 // checking to make sure all the information is correct
   if(isNaN(charactersLength) || charactersLength < 8 || charactersLength > 128) {
@@ -47,5 +65,6 @@ function callPrompts (){
   if (confirm('Press OK if you would like special characters')) {
     choiceArray = choiceArray.concat(specialCharacterArray);
   }
+  return true;
 
 }
