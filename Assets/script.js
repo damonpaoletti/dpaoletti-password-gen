@@ -4,7 +4,7 @@ var lowercaseArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o
 var uppercaseArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','W','X','Y','Z'];
 var numericArray = ['0','1','2','3','4','5','6','7','8','9'];
 var specialCharacterArray = ['!','@','#','$','#','&','%','}','{','*','?','/'];
-
+// Variables for all the arrays
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -35,7 +35,7 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword () {
   var password = '';
   for(var i= 0; i < charactersLength; i++){
-    var randomarray = Math.floor(Math.random() * choiceArray.length)
+    var randomarray = Math.floor(Math.random() * choiceArray.length) // Randomly selects with the math.floor and math.random 
     password = password + choiceArray[randomarray];
   }
   return password;
@@ -51,7 +51,7 @@ function callPrompts (){
     return false;
 
   }
-
+// if statements that check if you would like lowercase,special chars etc.. 
   if (confirm('Press OK if you would like lowercase letters')) {
     choiceArray = choiceArray.concat(lowercaseArray);
   }
