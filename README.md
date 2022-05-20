@@ -6,11 +6,11 @@ A Password Generator created in HTML,CSS, and Javascript. An easy way to create 
 
 ## Installation
 
-Click on the link to view the website:
+Click on the link to view the website: https://damonpaoletti.github.io/dpaoletti-password-gen/
 
 ## Images
 
-Below is a screenshot of the website: https://damonpaoletti.github.io/dpaoletti-password-gen/
+Below is a screenshot of the website: 
 
 
 ![Password Generator](/Assets/working-screenshot.png)
