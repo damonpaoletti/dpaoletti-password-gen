@@ -10,7 +10,7 @@ Click on the link to view the website:
 
 ## Images
 
-Below is a screenshot of the website:
-https://damonpaoletti.github.io/dpaoletti-password-gen/
+Below is a screenshot of the website: https://damonpaoletti.github.io/dpaoletti-password-gen/
+
 
 ![Password Generator](/Assets/working-screenshot.png)
